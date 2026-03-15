@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juan Pablo Jaramillo-Ramón | Academic Profile</title>
+<meta name="description" content="Researcher at FLACSO Ecuador. Democratic legitimacy, state capacity, political economy, and violence in Latin America.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --display: 'Cormorant Garamond', serif;
+  --body: 'Outfit', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --accent: #d4af37;
+  --bg: #0c0b09;
+  --text: #f0ece4;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.8; }
+::selection { background: rgba(212,175,55,0.3); }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.3); border-radius: 3px; }
+
+/* Grain */
+.grain { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 8s steps(10) infinite; }
+@keyframes grain { 0%,100%{transform:translate(0)} 10%{transform:translate(-5%,-10%)} 30%{transform:translate(3%,5%)} 50%{transform:translate(-8%,2%)} 70%{transform:translate(5%,-5%)} 90%{transform:translate(-3%,8%)} }
+@keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes lineGrow { from{width:0} to{width:64px} }
+
+.accent-line { height: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.5; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
+
+/* Header */
+header { padding: 80px 0 60px; }
+.overline { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; animation: fadeIn 0.6s ease 0.1s both; }
+.overline-bar { width: 64px; height: 1.5px; background: var(--accent); animation: lineGrow 0.8s ease 0.3s both; }
+.overline-text { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(40px, 8vw, 58px); line-height: 1.05; letter-spacing: -0.02em; animation: fadeIn 0.7s ease 0.15s both; }
+h1 .accent { color: var(--accent); }
+.subtitle { font-family: var(--mono); font-size: 13px; color: rgba(240,236,228,0.4); margin-top: 12px; animation: fadeIn 0.7s ease 0.25s both; }
+.bio { font-size: 16.5px; line-height: 1.75; color: rgba(240,236,228,0.6); max-width: 600px; margin-top: 28px; font-weight: 300; animation: fadeIn 0.7s ease 0.35s both; }
+.areas { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; animation: fadeIn 0.7s ease 0.45s both; }
+.area-tag { padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 500; background: rgba(212,175,55,0.08); color: var(--accent); border: 1px solid rgba(212,175,55,0.15); }
+.links { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 28px; animation: fadeIn 0.7s ease 0.55s both; }
+.links a { font-size: 12.5px; font-family: var(--mono); color: rgba(240,236,228,0.45); font-weight: 500; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 2px; transition: all 0.2s; }
+.links a:hover { color: var(--accent); border-color: var(--accent); opacity: 1; }
+
+/* Divider */
+.divider { height: 1px; background: rgba(255,255,255,0.06); }
+
+/* Publications */
+section { padding: 48px 0 80px; }
+.section-header { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 12px; animation: fadeIn 0.6s ease 0.6s both; }
+.section-overline { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+h2 { font-family: var(--display); font-size: 36px; font-weight: 600; margin-top: 6px; letter-spacing: -0.01em; }
+.section-count { font-family: var(--mono); font-size: 12px; color: rgba(240,236,228,0.35); }
+
+/* Filters */
+.filters { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; animation: fadeIn 0.6s ease 0.65s both; }
+.filter-btn { padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08); background: transparent; color: rgba(240,236,228,0.4); font-size: 12px; font-family: var(--mono); font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.filter-btn.active, .filter-btn:hover { border-color: var(--accent); background: rgba(212,175,55,0.1); color: var(--accent); }
+
+/* Paper cards */
+.paper { padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.06); animation: fadeIn 0.5s ease both; }
+.paper-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.paper-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.paper-year { font-family: var(--mono); font-size: 13px; color: var(--accent); font-weight: 700; }
+.status-pill { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.03em; font-family: var(--mono); }
+.status-published { color: #4ade80; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.25); }
+.status-forthcoming { color: #fbbf24; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25); }
+.status-nonpeer { color: #38bdf8; background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.25); }
+.status-draft { color: #a78bfa; background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.25); }
+.paper-title { font-size: 18px; font-weight: 600; color: var(--text); margin: 0 0 6px; line-height: 1.4; font-family: var(--display); cursor: pointer; transition: color 0.2s; }
+.paper-title:hover { color: var(--accent); }
+.paper-authors { font-size: 13.5px; color: rgba(240,236,228,0.55); margin: 0 0 4px; }
+.paper-journal { font-size: 13px; color: rgba(240,236,228,0.4); font-style: italic; margin: 0; }
+.doi-link { padding: 6px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); font-size: 11px; font-family: var(--mono); color: var(--accent); font-weight: 600; white-space: nowrap; background: rgba(255,255,255,0.03); flex-shrink: 0; transition: all 0.2s; }
+.doi-link:hover { background: rgba(212,175,55,0.1); border-color: var(--accent); opacity: 1; }
+.draft-link { padding: 6px 14px; border-radius: 8px; border: 1px solid rgba(167,139,250,0.3); font-size: 11px; font-family: var(--mono); color: #a78bfa; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+.paper-details { margin-top: 14px; display: none; }
+.paper-details.open { display: block; }
+.paper-abstract { font-size: 13.5px; color: rgba(240,236,228,0.5); line-height: 1.7; margin: 0 0 10px; }
+.keywords { display: flex; flex-wrap: wrap; gap: 6px; }
+.kw { padding: 2px 9px; border-radius: 6px; font-size: 11px; background: rgba(255,255,255,0.04); color: rgba(240,236,228,0.4); font-family: var(--mono); border: 1px solid rgba(255,255,255,0.06); }
+
+/* Footer */
+footer { padding: 0 0 48px; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-text { font-family: var(--mono); font-size: 11px; color: rgba(240,236,228,0.2); }
+
+@media (max-width: 600px) {
+  .container { padding: 0 20px; }
+  header { padding: 48px 0 40px; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+  .paper-top { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="accent-line"></div>
+
+<div class="container">
+<header>
+  <div class="overline">
+    <div class="overline-bar"></div>
+    <span class="overline-text">Researcher · FLACSO Ecuador</span>
+  </div>
+  <h1>Juan Pablo<br><span class="accent">Jaramillo-Ramón</span></h1>
+  <p class="subtitle">M.A. Comparative Politics · M.A. Economics · Quito, Ecuador</p>
+  <p class="bio">I hold a Master's degree in Comparative Politics from FLACSO Ecuador and an M.A. in Economics from Universidad EAFIT (Colombia). My research sits at the intersection of democratic legitimacy, state capacity, political economy, and violence in Latin America. I employ quantitative methods—including panel data analysis, cluster analysis, and survey-based approaches—to study how weak institutions, personalist leadership, and organized crime reshape democratic governance across the region.</p>
+  <div class="areas">
+    <span class="area-tag">State Capacity & Violence</span>
+    <span class="area-tag">Democratic Backsliding</span>
+    <span class="area-tag">Political Economy of Development</span>
+    <span class="area-tag">Electoral Behavior & Polarization</span>
+    <span class="area-tag">Organized Crime</span>
+    <span class="area-tag">Fiscal Policy & Institutions</span>
+  </div>
+  <div class="links">
+    <a href="https://orcid.org/0000-0001-6161-4477" target="_blank">ORCID</a>
+    <a href="https://scholar.google.com/citations?user=-LtZcTUAAAAJ&hl=es" target="_blank">Google Scholar</a>
+    <a href="https://x.com/jpjaramillo25" target="_blank">@jpjaramillo25</a>
+    <a href="/cdn-cgi/l/email-protection#1f756f757e6d7e72767373702d2a5f78727e7673317c7072"><span class="__cf_email__" data-cfemail="cea4bea4afbcafa3a7a2a2a1fcfb8ea9a3afa7a2e0ada1a3">[email&#160;protected]</span></a>
+  </div>
+</header>
+</div>
+
+<div class="container"><div class="divider"></div></div>
+
+<div class="container">
+<section>
+  <div class="section-header">
+    <div>
+      <span class="section-overline">Academic Output</span>
+      <h2>Publications & Working Papers</h2>
+    </div>
+    <span class="section-count" id="count"></span>
+  </div>
+  <div class="filters" id="filters"></div>
+  <div id="papers"></div>
+</section>
+</div>
+
+<div class="container">
+<footer>
+  <div class="footer-inner">
+    <span class="footer-text">© 2025 Juan Pablo Jaramillo-Ramón</span>
+    <span class="footer-text">Built with care</span>
+  </div>
+</footer>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const papers = [
+  // PUBLISHED
+  { title: "Del rostro al voto: adhesiones afectivas, miedo y particularismo en las elecciones presidenciales de Ecuador 2025", authors: "Pino-Uribe, J.F.; Jaramillo-Ramón, J.P.", journal: "Democracias, Vol.15(2), pp. 119-157", date: "2025-11-01", status: "published", doi: "10.54887/27376192.153", keywords: "adhesión afectiva, elecciones presidenciales Ecuador, miedo, reciprocidad particularista, polarización afectiva", abstract: "Este artículo analiza las adhesiones afectivas de los principales candidatos en las elecciones presidenciales de 2025 en Ecuador. Con base en una encuesta nacional representativa (n=1200; margen de error ±3%), se utiliza una estrategia cuantitativa que combina el análisis de conglomerados y regresiones logísticas binarias para identificar perfiles de adhesión en torno a Daniel Noboa, Luisa González y Rafael Correa." },
+  { title: "Homicidios sin fronteras: la transnacionalidad subnacional del narcotráfico en Ecuador y Colombia (2015-2022)", authors: "Pino-Uribe, J.F.; Jaramillo-Ramón, J.P.; Piedrahita-Bustamante, P.", journal: "Revista Criminalidad, 67(1): 59-77", date: "2025-01-01", status: "published", doi: "10.47741/17943108.637", keywords: "narcotráfico, homicidios, Ecuador, Colombia, transnacionalidad subnacional", abstract: "Este artículo explora los patrones subnacionales del crimen organizado transnacional relacionados con el narcotráfico y la violencia homicida entre el sur de Colombia y Ecuador durante el periodo 2015-2022." },
+  { title: "Femicidios en Ecuador (2015-2021): un análisis subnacional del impacto de la Ley de Erradicación de la Violencia de Género", authors: "Castillo Fell, S.; Jaramillo-Ramón, J.P.", journal: "Reflexión Política, Vol.26(53), pp. 149-162", date: "2024-06-29", status: "published", doi: "10.29375/01240781.4995", keywords: "Ecuador, violencia de género, mujer, política, legislación, femicidio, análisis subnacional", abstract: "Esta investigación analiza el impacto de la Ley Orgánica de Erradicación de Violencia de Género sobre la tasa de femicidios a nivel subnacional en Ecuador." },
+
+  // FORTHCOMING
+  { title: "Homicidal Violence and State Capacity in Latin America: The Story of the Paper Leviathans", authors: "Jaramillo-Ramón, J.P.; Curvale, C.", journal: "Crime, Law and Social Change (Springer)", date: "", status: "forthcoming", doi: "", keywords: "homicidal violence, state capacity, Latin America, Paper Leviathans, weak states, crime", abstract: "" },
+  { title: "Militarización extranjera como política de seguridad interna y polarización del relato político en Ecuador: ¿Retorna la Base Militar de Manta?", authors: "Jaramillo-Ramón, J.P.", journal: "Política Criminal", date: "", status: "forthcoming", doi: "", keywords: "militarización, seguridad interna, polarización política, Ecuador, Base de Manta", abstract: "" },
+  { title: "Late Industrialization and Growth: Evidence from 94 Countries in the Global Periphery", authors: "Jaramillo-Ramón, J.P.", journal: "CEPAL Review / Revista de la CEPAL", date: "", status: "forthcoming", doi: "", keywords: "late industrialization, economic growth, Global Periphery, development economics, panel data", abstract: "" },
+
+  // NON PEER-REVIEWED
+  { title: "The External Effect of Urban Schooling Attainment on Workers' Incomes in Ecuador", authors: "Breton, T.R.; Jaramillo-Ramón, J.P.", journal: "SSRN Working Paper", date: "2014-12-01", status: "nonpeer", doi: "", keywords: "urban schooling, human capital externalities, workers' incomes, Ecuador, education economics", abstract: "", link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2537544" },
+  { title: "¿Son las instituciones educativas privadas mejores que las públicas? El caso de Ecuador, una medición a partir de Ser Bachiller 2014", authors: "Jaramillo-Ramón, J.P.; Velastegui, L.", journal: "Working Paper", date: "2015-01-01", status: "nonpeer", doi: "", keywords: "educación privada, educación pública, Ecuador, Ser Bachiller, calidad educativa", abstract: "", link: "https://www.academia.edu/145331653/_Son_las_instituciones_educativas_privadas_mejores_que_las_p%C3%BAblicas_El_caso_de_Ecuador_una_medici%C3%B3n_a_partir_de_Ser_Bachiller_2014" },
+
+  // WORK IN PROGRESS
+  { title: "The Impact of Coca-Cultivation and Drug Trafficking Arrests on Homicide Rates in Ecuador: A Transnational Perspective", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "coca cultivation, drug trafficking, homicide rates, Ecuador, transnational crime", abstract: "" },
+  { title: "Ecuador since 2021: Escalation in Homicides, Weak State, and Transnational-Subnational Organized Crime", authors: "Jaramillo-Ramón, J.P.; Pino-Uribe, J.F.; Piedrahita-Bustamante, P.", journal: "", date: "", status: "draft", doi: "", keywords: "organized crime, transnational crime, subnational dynamics, Ecuador, drug trafficking", abstract: "" },
+  { title: "Autoritarismo competitivo en Ecuador: la presidencia de Daniel Noboa (2023-2026)", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "autoritarismo competitivo, Ecuador, Daniel Noboa, democracia, presidencialismo", abstract: "" },
+  { title: "Institutional Personalism: Charismatic Leadership, Performance Legitimacy, and Political Trust in Ecuador, 2004–2019", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "institutional personalism, charismatic leadership, performance legitimacy, political trust, Ecuador", abstract: "" },
+  { title: "Anchoring Bias in Runoff Polls: Evidence from the 2025 Ecuadorian Election", authors: "Curvale, C.; Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "anchoring bias, runoff elections, polling, Ecuador, 2025 election", abstract: "" },
+  { title: "Generations, Coups and Political Attitudes in Latin America: Evidence from the AmericasBarometer (2004-2019)", authors: "Curvale, C.; Jaramillo-Ramón, J.P.; Fierro, M.", journal: "", date: "", status: "draft", doi: "", keywords: "generations, coups, political attitudes, Latin America, AmericasBarometer", abstract: "" },
+  { title: "Ecuador's Rapid Slide into Competitive Authoritarianism: The Noboa Presidency (2023–2025)", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "competitive authoritarianism, Ecuador, Noboa, democratic backsliding", abstract: "" },
+  { title: "Oil, Institutions, and Human Development: Evidence from a Panel of Resource-Producing Countries", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "oil, institutions, human development, resource curse, panel data", abstract: "" },
+  { title: "Ideological Congruence and Democratic Support During the Pink Tide: A Cross-Level Analysis of Citizen-Government Ideology in Latin America", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "ideological congruence, democratic support, Pink Tide, Latin America", abstract: "" },
+  { title: "When the Strongman Builds the State: Personalist Leadership and Institutional Trust in Ecuador", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "personalist leadership, institutional trust, state-building, Ecuador", abstract: "" },
+  { title: "Ecuador's Fast Track to Competitive Authoritarianism: Daniel Noboa Ruling (2023-2026)", authors: "Jaramillo-Ramón, J.P.", journal: "", date: "", status: "draft", doi: "", keywords: "competitive authoritarianism, Ecuador, Daniel Noboa, democratic erosion", abstract: "" },
+  { title: "Fiscal Configurations and the Colonial Legacy: The Impact of Tax Collection and Inequality on Welfare in Latin America", authors: "Jaramillo-Ramón, J.P.; Pino-Uribe, J.F.", journal: "", date: "", status: "draft", doi: "", keywords: "fiscal configurations, colonial legacy, tax collection, inequality, welfare, Latin America", abstract: "" },
+  { title: "Tax Regimes in Latin America", authors: "Jaramillo-Ramón, J.P.; Pino-Uribe, J.F.", journal: "", date: "", status: "draft", doi: "", keywords: "tax regimes, Latin America, fiscal policy, taxation, political economy", abstract: "" },
+  { title: "\"Luisa te desdolariza\": emociones y desinformación en el balotaje ecuatoriano de 2025", authors: "Jaramillo-Ramón, J.P.; Curvale, C.", journal: "", date: "", status: "draft", doi: "", keywords: "desinformación, emociones, dolarización, balotaje, Ecuador 2025", abstract: "" },
+];
+
+const statusOrder = { published: 0, forthcoming: 1, nonpeer: 2, draft: 3 };
+const statusLabels = { published: "Published", forthcoming: "Forthcoming", nonpeer: "Non Peer-Reviewed", draft: "Work in Progress" };
+const statusClass = { published: "status-published", forthcoming: "status-forthcoming", nonpeer: "status-nonpeer", draft: "status-draft" };
+
+let currentFilter = "all";
+
+function getYear(d) { return d ? new Date(d).getFullYear() : "—"; }
+
+function renderPapers() {
+  const filtered = papers
+    .filter(p => currentFilter === "all" || p.status === currentFilter)
+    .sort((a, b) => {
+      const sa = statusOrder[a.status] ?? 3, sb = statusOrder[b.status] ?? 3;
+      if (sa !== sb) return sa - sb;
+      return (b.date || "").localeCompare(a.date || "");
+    });
+
+  const counts = {
+    all: papers.length,
+    published: papers.filter(p => p.status === "published").length,
+    forthcoming: papers.filter(p => p.status === "forthcoming").length,
+    nonpeer: papers.filter(p => p.status === "nonpeer").length,
+    draft: papers.filter(p => p.status === "draft").length,
+  };
+
+  document.getElementById("count").textContent = `${counts.all} papers · ${counts.published} published`;
+
+  document.getElementById("filters").innerHTML = [
+    { key: "all", label: `All (${counts.all})` },
+    { key: "published", label: `Published (${counts.published})` },
+    { key: "forthcoming", label: `Forthcoming (${counts.forthcoming})` },
+    { key: "nonpeer", label: `Non Peer-Reviewed (${counts.nonpeer})` },
+    { key: "draft", label: `In Progress (${counts.draft})` },
+  ].map(f => `<button class="filter-btn ${currentFilter === f.key ? 'active' : ''}" onclick="setFilter('${f.key}')">${f.label}</button>`).join("");
+
+  document.getElementById("papers").innerHTML = filtered.map((p, i) => {
+    const year = getYear(p.date);
+    const kws = p.keywords ? p.keywords.split(",").map(k => `<span class="kw">${k.trim()}</span>`).join("") : "";
+    const doiBtn = p.doi ? `<a class="doi-link" href="https://doi.org/${p.doi}" target="_blank">DOI ↗</a>` : p.link ? `<a class="doi-link" href="${p.link}" target="_blank" style="color:#38bdf8;border-color:rgba(56,189,248,0.3)">Paper ↗</a>` : "";
+    const hasDetails = p.abstract || p.keywords;
+    return `
+      <div class="paper" style="animation-delay:${0.1 + i * 0.05}s">
+        <div class="paper-top">
+          <div style="flex:1;min-width:0">
+            <div class="paper-meta">
+              <span class="paper-year">${year}</span>
+              <span class="status-pill ${statusClass[p.status]}">${statusLabels[p.status]}</span>
+            </div>
+            <h3 class="paper-title" ${hasDetails ? `onclick="toggleDetails(this)"` : ''}>${p.title}</h3>
+            <p class="paper-authors">${p.authors}</p>
+            ${p.journal ? `<p class="paper-journal">${p.journal}</p>` : ''}
+          </div>
+          ${doiBtn}
+        </div>
+        ${hasDetails ? `<div class="paper-details">
+          ${p.abstract ? `<p class="paper-abstract">${p.abstract}</p>` : ''}
+          ${kws ? `<div class="keywords">${kws}</div>` : ''}
+        </div>` : ''}
+      </div>`;
+  }).join("");
+}
+
+functi
