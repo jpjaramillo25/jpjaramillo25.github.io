@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -126,7 +126,7 @@ footer { padding: 0 0 48px; }
     <a href="https://orcid.org/0000-0001-6161-4477" target="_blank">ORCID</a>
     <a href="https://scholar.google.com/citations?user=-LtZcTUAAAAJ&hl=es" target="_blank">Google Scholar</a>
     <a href="https://x.com/jpjaramillo25" target="_blank">@jpjaramillo25</a>
-    <a href="/cdn-cgi/l/email-protection#1f756f757e6d7e72767373702d2a5f78727e7673317c7072"><span class="__cf_email__" data-cfemail="cea4bea4afbcafa3a7a2a2a1fcfb8ea9a3afa7a2e0ada1a3">[email&#160;protected]</span></a>
+    <a href="mailto:jpjaramillo25@gmail.com">jpjaramillo25@gmail.com</a>
   </div>
 </header>
 </div>
@@ -156,7 +156,7 @@ footer { padding: 0 0 48px; }
 </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const papers = [
   // PUBLISHED
   { title: "Del rostro al voto: adhesiones afectivas, miedo y particularismo en las elecciones presidenciales de Ecuador 2025", authors: "Pino-Uribe, J.F.; Jaramillo-Ramón, J.P.", journal: "Democracias, Vol.15(2), pp. 119-157", date: "2025-11-01", status: "published", doi: "10.54887/27376192.153", keywords: "adhesión afectiva, elecciones presidenciales Ecuador, miedo, reciprocidad particularista, polarización afectiva", abstract: "Este artículo analiza las adhesiones afectivas de los principales candidatos en las elecciones presidenciales de 2025 en Ecuador. Con base en una encuesta nacional representativa (n=1200; margen de error ±3%), se utiliza una estrategia cuantitativa que combina el análisis de conglomerados y regresiones logísticas binarias para identificar perfiles de adhesión en torno a Daniel Noboa, Luisa González y Rafael Correa." },
@@ -251,4 +251,18 @@ function renderPapers() {
   }).join("");
 }
 
-functi
+
+function toggleDetails(el) {
+  const details = el.closest('.paper').querySelector('.paper-details');
+  if (details) details.classList.toggle('open');
+}
+
+function setFilter(key) {
+  currentFilter = key;
+  renderPapers();
+}
+
+renderPapers();
+</script>
+</body>
+</html>
